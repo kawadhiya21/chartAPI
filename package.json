@@ -1,0 +1,15 @@
+{
+  "name": "charty",
+  "version": "1.0.0",
+  "description": "An API to generate chart images for you",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kshitij Awadhiya",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "hogan-express": "^0.5.2"
+  }
+}
