@@ -40,10 +40,16 @@ if (system.args.length < 3 || system.args.length > 5) {
             console.log('Unable to load the address!');
             phantom.exit(1);
         } else {
-            window.setTimeout(function () {
-                page.render(output);
-                phantom.exit();
-            }, 200);
+            page.onLoadFinished(function() {
+              page.evaluate(function() {
+                  window.google.visualization.events.addListener(window.chart, 'ready', function() {
+                    window.setTimeout(function () {
+                        page.render(output);
+                        phantom.exit();
+                    }, 200);
+                  });
+              });
+            });
         }
     });
 }
