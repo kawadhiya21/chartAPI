@@ -48,8 +48,29 @@ URL - http://chartmaker.yourdomain.com/line_chart?id=4
 ```
 
 #### Generate the graph
-This needs to execute from your application.
+This needs to execute from your application as a shell script.
 
 ```
 '/path_to_phantomjs' '/path_to_rasterize.js' 'http://chartmaker.yourdomain.com/line_chart?id=4' '/output_file_path'
 ```
+
+### Examples
+#### Ruby
+
+```
+system("'/path_to_phantomjs' '/path_to_rasterize.js' 'http://chartmaker.yourdomain.com/line_chart?id=4' '/output_file_path'")
+```
+
+#### Python
+```
+import subprocess
+subprocess.call(["'/path_to_phantomjs' '/path_to_rasterize.js' 'http://chartmaker.yourdomain.com/line_chart?id=4' '/output_file_path'"])
+```
+
+#### PHP
+```
+shell_exec("'/path_to_phantomjs' '/path_to_rasterize.js' 'http://chartmaker.yourdomain.com/line_chart?id=4' '/output_file_path'")
+```
+
+#### Upload
+The image can be uploaded to S3 or wherever you want.
