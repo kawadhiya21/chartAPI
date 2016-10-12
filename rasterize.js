@@ -41,14 +41,21 @@ if (system.args.length < 3 || system.args.length > 5) {
             phantom.exit(1);
         } else {
             page.onLoadFinished(function() {
-              page.evaluate(function() {
-                  window.google.visualization.events.addListener(window.chart, 'ready', function() {
-                    window.setTimeout(function () {
-                        page.render(output);
-                        phantom.exit();
-                    }, 200);
-                  });
-              });
+                // To ensure the chart loads fully
+                // page.evaluate(function() {
+                //     window.google.visualization.events.addListener(window.chart, 'ready', function() {
+                //       window.setTimeout(function () {
+                //           page.render(output);
+                //           phantom.exit();
+                //       }, 200);
+                //     });
+                // });
+
+                // To take screenshot after 200ms post page load
+                window.setTimeout(function () {
+                    page.render(output);
+                    phantom.exit();
+                }, 200);
             });
         }
     });
