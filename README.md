@@ -1,5 +1,5 @@
-# ChartAPI - An API to generate images for charts
-This API generates images from google charts are for the record any charting library you want. The charts are not interactive. The images generated from the chart can be used to showcase data where a browser is not available. This is particularly useful when generating data for emails, presentations or simply, distributions or even printing. Chart images can be cached to be used over a period of time. This also eliminates the need to load a charting library.
+# ChartAPI - An API to generate images of charts
+This API generates images from google charts or for the record any charting library you want. The charts are not interactive. The images generated from the chart can be used to showcase data where a browser is not available. This is particularly useful when generating data for emails, presentations or simply, distributions or even printing. Chart images can be cached to be used over a period of time. This also eliminates the need to load a charting library.
 
 #### Requirements
 * NodeJS
